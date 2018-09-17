@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Homework 2 | L154289</string>
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string name="radio_male">Male</string>
+<string name="radio_female">Female</string>
+<string name="btn_display">Display</string>
+</resources>
