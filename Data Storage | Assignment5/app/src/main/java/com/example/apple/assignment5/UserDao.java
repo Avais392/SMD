@@ -23,6 +23,9 @@ public interface UserDao {
     @Query("SELECT COUNT(*) from user")
     int countUsers();
 
+    @Query("UPDATE user SET first_name=:firstName, last_name=:lastName WHERE uid LIKE :id")
+    void update(int id,String firstName,String lastName);
+
     @Insert
     void insertAll(User... users);
 

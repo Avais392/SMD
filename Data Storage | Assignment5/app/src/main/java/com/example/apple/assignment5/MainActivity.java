@@ -31,11 +31,28 @@ public class MainActivity extends AppCompatActivity {
 
                     for (int i =0; i <users.size();i++)
                     {
-                        TextView CView=(TextView)findViewById(R.id.c_view);
-                        CView.append(String.valueOf(users.get(i).getUid())+"    "+users.get(i).getFirstName()+"\n");
-                        Log.d("userName:",users.get(i).getFirstName());
-                        Log.d("userID:",String.valueOf(users.get(i).getUid()));
+                       Log.d("userID:",String.valueOf(users.get(i).getUid()));
+                        Log.d("userFirstName:",users.get(i).getFirstName());
+                        Log.d("userLastName:",users.get(i).getLastName());
                     }
+                    TextView CView=(TextView)findViewById(R.id.c_view);
+                    for (int i =0; i <users.size();i++)
+                    {
+                       myDb.userDao().update(users.get(i).getUid(),users.get(i).getFirstName(),"Updated");
+                    }
+
+
+
+                    for (int i =0; i <users.size();i++)
+                    {
+
+
+                        Log.d("userID:",String.valueOf(users.get(i).getUid()));
+                        Log.d("userFirstName:",users.get(i).getFirstName());
+                        Log.d("userLastName:",users.get(i).getLastName());
+                    }
+
+
                 }
             }) .start();
         }
