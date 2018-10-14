@@ -23,7 +23,7 @@ public class TestDatabaseAsyncTask extends AsyncTask {
 
         MyDatabase myDb = MyDatabase.getAppDatabase(c);
         int a = myDb.userDao().countUsers();
-        Log.d("-----",String.valueOf(a));
+       // Log.d("-----",String.valueOf(a));
         User user = new User();
         user.setAge(22);
         user.setFirstName("Avais");

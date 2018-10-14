@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
                 public void run() {
 
                     List<User> users = myDb.userDao().getAll();
-
+                    Log.d("Previous",String.valueOf(myDb.userDao().countUsers()));
                     for (int i =0; i <users.size();i++)
                     {
                        Log.d("userID:",String.valueOf(users.get(i).getUid()));
@@ -41,15 +41,15 @@ public class MainActivity extends AppCompatActivity {
                        myDb.userDao().update(users.get(i).getUid(),users.get(i).getFirstName(),"Updated");
                     }
 
-
-
-                    for (int i =0; i <users.size();i++)
+                    List<User> users1 = myDb.userDao().getAll();
+                    Log.d("Updated",String.valueOf(myDb.userDao().countUsers()));
+                    for (int i =0; i <users1.size();i++)
                     {
 
 
-                        Log.d("userID:",String.valueOf(users.get(i).getUid()));
-                        Log.d("userFirstName:",users.get(i).getFirstName());
-                        Log.d("userLastName:",users.get(i).getLastName());
+                        Log.d("userID:",String.valueOf(users1.get(i).getUid()));
+                        Log.d("userFirstName:",users1.get(i).getFirstName());
+                        Log.d("userLastName:",users1.get(i).getLastName());
                     }
 
 
