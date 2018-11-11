@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.apple.tabssample">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+
+        <activity android:name=".PostActivity" />
+
+        <activity android:name=".ViewEvent" />
+        <activity android:name=".ListItemFollowersAndFollowing" />
+        <activity android:name=".homepage" />
+        <activity
+            android:name=".login"
+            android:label="login" />
+        <activity
+            android:name=".signup"
+            android:label="signup" />
+        <activity
+            android:name=".forgotPassword"
+            android:label="forgotPassword" />
+        <activity
+            android:name=".profile"
+            android:label="profile" />
+        <activity
+            android:name=".editProfile"
+            android:label="editProfile" />
+        <activity
+            android:name=".CreateEvent"
+            android:label="CreateEvent" />
+        <activity
+            android:name=".createTrip"
+            android:label="createTrip" />
+        <activity
+            android:name=".FollowersAndFollowing"
+            android:label="FollowersAndFollowing" />
+        <activity android:name=".LikeAndComment">
+
+        </activity>
+        <activity android:name=".Comment"></activity>
+        <activity android:name=".userprofile"></activity>
+
+        <activity android:name=".TripPreview" />
+        <activity android:name=".EventPreview"></activity>
+    </application>
+
+</manifest>
